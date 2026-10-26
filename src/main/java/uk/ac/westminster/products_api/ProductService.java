@@ -38,4 +38,19 @@ public class ProductService {
                 .toList();
     }
 
+    @Service
+    public class ProductService {
+
+        private List<Product> products = new ArrayList<>();
+        private Long nextId = 1L;
+
+        public ProductService() {
+            products.add(new DigitalProduct(
+                    nextId++, "Clean Code (E-book)", 29.99,
+                    "/downloads/clean-code.pdf", 4.2
+            ));
+
+        }
+    }
+
 }
